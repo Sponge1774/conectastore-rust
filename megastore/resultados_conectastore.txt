@@ -1,0 +1,25 @@
+    Finished `release` profile [optimized] target(s) in 0.01s
+     Running `target/release/megastore`
+=== ConectaStore — Sistema de Recomendação de Produtos Baseado em Grafos ===
+
+Catálogo: 4 produtos cadastrados.
+Consulta direta (id 1002): Some("Livro de Rust")
+
+Recomendações (BFS) para o Cliente Eduardo:
+  - Carregador USB-C (score=0.80, distância=2)
+  - Mousepad (score=0.60, distância=2)
+
+=== Benchmark: tempo de construção (com pré-alocação) e recomendação por volume ===
+    clientes |     produtos |    arestas |    constr.(ms) |   recom. BFS(µs)
+         500 |         2500 |      12499 |           1.73 |             8.57
+        2000 |        10000 |      49999 |           6.52 |            12.21
+       10000 |        50000 |     249998 |          39.02 |            10.88
+       50000 |       250000 |    1249999 |         207.35 |            11.35
+      150000 |       750000 |    3749997 |         869.35 |            10.41
+
+=== Comparação lista × matriz de adjacência (espaço ocupado) ===
+  vértices |    arestas |         V² |    lista (bytes) |   matriz (bytes) |      razão
+       110 |        316 |      12100 |             8464 |            96800 |      11.4x
+       510 |       1596 |     260100 |            42384 |          2080800 |      49.1x
+      1510 |       4796 |    2280100 |           127184 |         18240800 |     143.4x
+      3010 |       9597 |    9060100 |           254408 |         72480800 |     284.9x
