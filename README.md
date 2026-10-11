@@ -21,7 +21,9 @@ duplicatas.
 - **Geração de dados sintéticos**: gerador congruencial linear próprio,
   sem dependências externas
 
-## Instruções para compilação e execução
+## Link do vídeo pitch
+Apresentação do projeto rodando no VS Code (até 4 minutos):
+https://youtu.be/xT1W0b_cho4
 ```bash
 cargo build --release
 ./target/release/megastore
