@@ -1,13 +1,4 @@
-# ConectaStore (Rust)
-
-Sistema de recomendação de produtos baseado em grafos, em Rust — grafo em
-lista de adjacência, BFS/DFS e HashMap/HashSet. Projeto da disciplina
-**Data Structure Strategy and Implementation** (UniFECAF).
-
-> Repositório: `conectastore-rust` · Crate: `megastore` (nome interno do
-> pacote em `Cargo.toml` — não precisa bater com o nome do repositório).
-
----
+# ConectaStore — Sistema de Recomendação de Produtos Baseado em Grafos
 
 ## Objetivo e funcionamento
 Sistema de recomendação para a MegaStore que modela produtos, clientes e
@@ -97,16 +88,10 @@ megastore/
 | 3.010    | 9.597   | 9.060.100 | 254.408         | 72.480.800      | 284,9×  |
 
 Máquina de referência: notebook do autor (Samsung Expert, 2018, Intel Core
-i7-8550U 1,80 GHz, 11 GiB de RAM, SSD de 428 GB, Pop!_OS), build
-`--release`, otimização O3, execução via `rodar_testes.sh`. Discussão
-completa no relatório técnico, Seções 3.4, 5.3 e 6.
-
-## Relatório técnico
-O relatório completo (fundamentação teórica, modelagem, análise de
-complexidade e discussão de desempenho) está no PDF entregue junto com
-este repositório — não incluído aqui por ser a Parte Teórica de uma
-entrega acadêmica separada.
+i7-8550U 1,80 GHz, 11 GiB de RAM, SSD de 428 GB, Pop!_OS), build `--release`, otimização O3, execução via
+`rodar_testes.sh`. Discussão completa no relatório técnico, Seções
+3.4, 5.3 e 6.
 
 ## Link do vídeo pitch
-A preencher após a gravação (até 4 minutos), publicado no YouTube como
-não listado ou em plataforma equivalente.
+Apresentação do projeto rodando no VS Code (até 4 minutos):
+https://youtu.be/xT1W0b_cho4
