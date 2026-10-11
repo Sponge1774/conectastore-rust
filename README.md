@@ -22,15 +22,21 @@ duplicatas.
   sem dependências externas
 
 ## Instruções para compilação e execução
+**Pré-requisito:** Rust (stable, edition 2021) com o Cargo, instalado via
+https://rustup.rs. Testado com Cargo 1.97 em Linux. Não há
+dependências externas.
+
 ```bash
+git clone https://github.com/Sponge1774/conectastore-rust
+cd conectastore-rust/megastore
 cargo build --release
 ./target/release/megastore
 ```
-Alternativamente, o script `rodar_testes.sh` (na raiz do projeto) executa
-compilação, testes e a demonstração/benchmarks em sequência, com pausas
+Alternativamente, o script `rodar_testes.sh` (dentro da pasta `megastore/`)
+executa compilação, testes e a demonstração em sequência, com pausas
 para captura de prints:
 ```bash
-./rodar_testes.sh
+bash rodar_testes.sh
 ```
 
 ## Instruções para execução dos testes
