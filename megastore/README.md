@@ -21,12 +21,16 @@ duplicatas.
 - **Geração de dados sintéticos**: gerador congruencial linear próprio,
   sem dependências externas
 
-## Link do vídeo pitch
-Apresentação do projeto rodando no VS Code (até 4 minutos):
-https://youtu.be/xT1W0b_cho4
+## Instruções para compilação e execução
 ```bash
 cargo build --release
 ./target/release/megastore
+```
+Alternativamente, o script `rodar_testes.sh` (na raiz do projeto) executa
+compilação, testes e a demonstração/benchmarks em sequência, com pausas
+para captura de prints:
+```bash
+./rodar_testes.sh
 ```
 
 ## Instruções para execução dos testes
@@ -62,17 +66,18 @@ megastore/
 ├── tests/
 │   └── integration_test.rs
 ├── Cargo.toml
+├── rodar_testes.sh    (script de testes/prints para o relatório)
 └── README.md
 ```
 
 ## Resultados dos testes de desempenho
 | Clientes | Produtos | Arestas    | Construção (ms) | Recomendação BFS (µs) |
 |---------:|---------:|-----------:|-----------------:|------------------------:|
-| 500      | 2.500    | 12.499     | 0,99             | 6,01                    |
-| 2.000    | 10.000   | 49.999     | 4,26             | 6,94                    |
-| 10.000   | 50.000   | 249.998    | 31,63            | 8,44                    |
-| 50.000   | 250.000  | 1.249.999  | 207,51           | 13,79                   |
-| 150.000  | 750.000  | 3.749.997  | 638,84           | 12,13                   |
+| 500      | 2.500    | 12.499     | 1,73             | 8,57                    |
+| 2.000    | 10.000   | 49.999     | 6,52             | 12,21                   |
+| 10.000   | 50.000   | 249.998    | 39,02            | 10,88                   |
+| 50.000   | 250.000  | 1.249.999  | 207,35           | 11,35                   |
+| 150.000  | 750.000  | 3.749.997  | 869,35           | 10,41                   |
 
 ## Comparação lista × matriz de adjacência (espaço ocupado)
 | Vértices | Arestas | V²        | Lista (bytes) | Matriz (bytes) | Razão   |
@@ -82,10 +87,11 @@ megastore/
 | 1.510    | 4.796   | 2.280.100 | 127.184         | 18.240.800      | 143,4×  |
 | 3.010    | 9.597   | 9.060.100 | 254.408         | 72.480.800      | 284,9×  |
 
-Máquina de referência: ambiente de execução em nuvem (container Linux,
-build `--release`, otimização O3). Discussão completa no relatório
-técnico, Seções 3.4, 5.3 e 6.
+Máquina de referência: notebook do autor (Samsung Expert, 2018, Intel Core
+i7-8550U 1,80 GHz, 11 GiB de RAM, SSD de 428 GB, Pop!_OS), build `--release`, otimização O3, execução via
+`rodar_testes.sh`. Discussão completa no relatório técnico, Seções
+3.4, 5.3 e 6.
 
 ## Link do vídeo pitch
-A preencher após a gravação (até 4 minutos), publicado no YouTube como
-não listado ou em plataforma equivalente.
+Apresentação do projeto rodando no VS Code (até 4 minutos):
+https://youtu.be/xT1W0b_cho4
